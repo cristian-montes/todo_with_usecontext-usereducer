@@ -1,13 +1,13 @@
 import React from "react";
 
-const TodoItem = ({text}) => {
+const TodoItem = ({text, clickToToggle, clickToDelete, complete}) => {
     return(
         <div>
-            <span>{text}</span>
-            <button>
+            <span style={{ color: complete ? "green" : "red"}}>{text}</span>
+            <button onClick={clickToToggle}>
                 TOGGLE
             </button>
-            <button>
+            <button onClick={clickToDelete}>
                 DELETE
             </button>
         </div>

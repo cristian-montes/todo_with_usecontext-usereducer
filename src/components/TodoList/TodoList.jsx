@@ -13,7 +13,10 @@ const TodoList = () => {
                     <TodoItem 
                         key = {todo.id}
                         text = {todo.text}
-                        
+                        complete = {todo.complete}
+                        clickToToggle = {() => toggleTodo(todo.id)}
+                        clickToDelete = {() => deleteTodo(todo.id)}
+
                     />
                 ))
 
