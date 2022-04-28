@@ -11,7 +11,9 @@ const TodoList = () => {
             <div>
                 { todos.map( todo => (
                     <TodoItem 
+                        key = {todo.id}
                         text = {todo.text}
+                        
                     />
                 ))
 
