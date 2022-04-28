@@ -1,21 +1,21 @@
-import React from "react"
+import React, {useContext} from "react"
 import TodoItem from "./TodoItem/TodoItem";
+import todoContext from "../../context/todo-context";
 
 const TodoList = () => {
-    const items = ['eggs', 'chorizo', 'beans']
-
-    // console.log('ITEMS', items)
+   const {todos, toggleTodo,deleteTodo } = useContext(todoContext)
 
     return(
         <div>
             <h3> List of To-Do's</h3>
             <div>
-                {items.map((item) => (
-                    <TodoItem
-                        key={item}
-                        item = {item}
+                { todos.map( todo => (
+                    <TodoItem 
+                        text = {todo.text}
                     />
-                ))}
+                ))
+
+                }
             </div>
         </div>
 

@@ -1,9 +1,9 @@
 import React from "react";
 
-const TodoItem = ({item}) => {
+const TodoItem = ({text}) => {
     return(
         <div>
-            <span>{item}</span>
+            <span>{text}</span>
             <button>
                 TOGGLE
             </button>
