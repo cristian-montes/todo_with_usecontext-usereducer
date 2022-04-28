@@ -1,12 +1,17 @@
 import TodoInput from './components/TodoInput/TodoInput';
 import TodoList from './components/TodoList/TodoList';
+import TodoState from './context/TodoState';
+
+
 
 function App() {
   return (
     <div className="App">
-  
-      <TodoInput />
-      <TodoList />
+      <TodoState>
+        <TodoInput />
+        <TodoList />
+      </TodoState>
+    
     </div>
   );
 }

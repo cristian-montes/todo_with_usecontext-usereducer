@@ -4,7 +4,7 @@ import TodoItem from "./TodoItem/TodoItem";
 const TodoList = () => {
     const items = ['eggs', 'chorizo', 'beans']
 
-    console.log('ITEMS', items)
+    // console.log('ITEMS', items)
 
     return(
         <div>
@@ -12,7 +12,8 @@ const TodoList = () => {
             <div>
                 {items.map((item) => (
                     <TodoItem
-                item = {item}
+                        key={item}
+                        item = {item}
                     />
                 ))}
             </div>

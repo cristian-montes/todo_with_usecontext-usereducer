@@ -14,7 +14,7 @@ const TodoState = (props) => {
     const addTodo = (todo) => {
         dispatch({
             type: ADD_TODO,
-            payload: todo
+            payload: todo,
         })
     }
 
@@ -22,7 +22,7 @@ const TodoState = (props) => {
     const toggleTodo = (todoID) => {
         dispatch({
             type: TOGGLE_TODO,
-            payload: todoID
+            payload: todoID,
         })
     }
 
@@ -30,7 +30,7 @@ const TodoState = (props) => {
     const deleteTodo = (todoID) => {
         dispatch({
             type: DELETE_TODO,
-            payload: todoID
+            payload: todoID,
         })
     }
 
@@ -38,13 +38,14 @@ const TodoState = (props) => {
   return (
     <TodoContext.Provider value={{
         todos: state.todos,
-        addTodo,
-        toggleTodo,
-        deleteTodo
-    }}>
+            addTodo,
+            toggleTodo,
+            deleteTodo
+         }}
+    >
         {props.children}
     </TodoContext.Provider>
-  )
-}
+  );
+};
 
-export default TodoState
+export default TodoState;
